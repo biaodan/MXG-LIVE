@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="description" content="PesoRápido — La app de préstamos más confiable de México. Obtén hasta $20,000 MXN en minutos, directo a tu cuenta. 100% en línea, sin aval ni fiador." />
+  <meta name="theme-color" content="#0A1628" />
+  <title>PesoRápido — Préstamos rápidos hasta $20,000 MXN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════ NAV ═══════════════ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <span class="nav__logo-icon">₱</span>
+        <span>Peso<strong>Rápido</strong></span>
+      </a>
+      <a href="#download" class="btn btn--sm btn--glow nav__cta">Descargar gratis</a>
+    </div>
+  </header>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="hero">
+    <div class="hero__bg-grid"></div>
+    <div class="hero__orb hero__orb--1"></div>
+    <div class="hero__orb hero__orb--2"></div>
+
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <div class="hero__badge">
+          <span class="badge__dot"></span>
+          <span id="activeUsers">12,847</span> usuarios activos ahora
+        </div>
+
+        <h1 class="hero__title">
+          Dinero en tu cuenta<br />
+          <span class="hero__title--accent">en 10 minutos.</span>
+        </h1>
+
+        <p class="hero__sub">
+          La app de préstamos personales más rápida de México. Sin aval, sin papeleos, sin filas. Solo tú, tu cel y tu dinero.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#download" class="btn btn--primary btn--lg" id="heroDownloadBtn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" fill="currentColor"/></svg>
+            Descargar para Android
+          </a>
+          <p class="hero__legal">✓ Gratis · Sin tarjeta · 18+ únicamente</p>
+        </div>
+
+        <div class="hero__stats">
+          <div class="stat">
+            <span class="stat__num" data-target="2500000">0</span>
+            <span class="stat__label">Usuarios en México</span>
+          </div>
+          <div class="stat__divider"></div>
+          <div class="stat">
+            <span class="stat__num" data-target="98" data-suffix="%">0</span>
+            <span class="stat__label">Tasa de aprobación</span>
+          </div>
+          <div class="stat__divider"></div>
+          <div class="stat">
+            <span class="stat__num" data-target="48" data-suffix="★">0</span>
+            <span class="stat__label">Calificación Play Store</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phone Mockup -->
+      <div class="hero__phone-wrap">
+        <div class="phone-mockup">
+          <div class="phone-mockup__frame">
+            <div class="phone-mockup__screen">
+              <div class="phone-screen">
+                <div class="phone-screen__topbar">
+                  <span class="topbar__time">9:41</span>
+                  <span class="topbar__icons">●●●●● 📶 🔋</span>
+                </div>
+                <div class="phone-screen__header">
+                  <span class="screen-logo">₱ PesoRápido</span>
+                  <span class="screen-notif">🔔</span>
+                </div>
+
+                <div class="phone-screen__card approval-card">
+                  <p class="approval-card__label">Tu préstamo aprobado</p>
+                  <div class="approval-card__amount">
+                    $<span id="loanCounter">0</span>
+                  </div>
+                  <div class="approval-card__bar">
+                    <div class="approval-card__bar-fill" id="approvalBar"></div>
+                  </div>
+                  <p class="approval-card__sub">Depositando a tu cuenta CLABE…</p>
+                </div>
+
+                <div class="phone-screen__actions">
+                  <div class="screen-action">
+                    <div class="screen-action__icon">💳</div>
+                    <span>Préstamo</span>
+                  </div>
+                  <div class="screen-action">
+                    <div class="screen-action__icon">📊</div>
+                    <span>Historial</span>
+                  </div>
+                  <div class="screen-action">
+                    <div class="screen-action__icon">🔄</div>
+                    <span>Renovar</span>
+                  </div>
+                  <div class="screen-action">
+                    <div class="screen-action__icon">👤</div>
+                    <span>Perfil</span>
+                  </div>
+                </div>
+
+                <div class="phone-screen__txns">
+                  <p class="txns__title">Últimos movimientos</p>
+                  <div class="txn txn--credit">
+                    <span class="txn__icon">↓</span>
+                    <div class="txn__info"><b>Depósito recibido</b><small>Hace 2 min</small></div>
+                    <span class="txn__amount txn__amount--green">+$5,000</span>
+                  </div>
+                  <div class="txn txn--debit">
+                    <span class="txn__icon">↑</span>
+                    <div class="txn__info"><b>Pago realizado</b><small>Lun 23 Jun</small></div>
+                    <span class="txn__amount txn__amount--red">-$1,200</span>
+                  </div>
+                  <div class="txn txn--credit">
+                    <span class="txn__icon">↓</span>
+                    <div class="txn__info"><b>Depósito recibido</b><small>Dom 22 Jun</small></div>
+                    <span class="txn__amount txn__amount--green">+$10,000</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Floating badges -->
+          <div class="float-badge float-badge--1">
+            <span class="float-badge__icon">✅</span>
+            <div><b>¡Aprobado!</b><small>En 8 minutos</small></div>
+          </div>
+          <div class="float-badge float-badge--2">
+            <span class="float-badge__icon">🛡️</span>
+            <div><b>100% Seguro</b><small>Encriptado</small></div>
+          </div>
+          <div class="float-badge float-badge--3">
+            <span class="float-badge__icon">⚡</span>
+            <div><b>Sin aval</b><small>Sin fiador</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ TRUST STRIP ═══════════════ -->
+  <section class="trust-strip">
+    <div class="container trust-strip__inner">
+      <div class="trust-item">
+        <span class="trust-item__icon">🏦</span>
+        <span>Regulado por CONDUSEF</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-item__icon">🔒</span>
+        <span>Encriptación SSL 256-bit</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-item__icon">📱</span>
+        <span>+2.5M descargas en México</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-item__icon">⚡</span>
+        <span>Depósito en 10 minutos</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-item__icon">🌙</span>
+        <span>Disponible 24/7</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FEATURES ═══════════════ -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">¿Por qué PesoRápido?</p>
+        <h2 class="section-title">Diseñado para la vida<br /><span class="accent">real de los mexicanos.</span></h2>
+      </div>
+
+      <div class="features__grid">
+        <div class="feature-card feature-card--large" data-aos>
+          <div class="feature-card__icon-wrap">
+            <div class="feature-card__icon">⚡</div>
+          </div>
+          <h3>Aprobación ultrarrápida</h3>
+          <p>Nuestro sistema evalúa tu solicitud en menos de 60 segundos. Sin esperas, sin citas, sin sucursales.</p>
+          <div class="feature-card__tag">Promedio: 8 min</div>
+        </div>
+
+        <div class="feature-card" data-aos>
+          <div class="feature-card__icon-wrap">
+            <div class="feature-card__icon">📄</div>
+          </div>
+          <h3>Sin papeleos</h3>
+          <p>Solo necesitas tu INE y CURP. Todo desde tu teléfono, en 5 pasos simples.</p>
+        </div>
+
+        <div class="feature-card" data-aos>
+          <div class="feature-card__icon-wrap">
+            <div class="feature-card__icon">💰</div>
+          </div>
+          <h3>Hasta $20,000 MXN</h3>
+          <p>Empieza desde $1,000 y aumenta tu límite con cada pago puntual. Tú decides cuánto y cuándo.</p>
+        </div>
+
+        <div class="feature-card" data-aos>
+          <div class="feature-card__icon-wrap">
+            <div class="feature-card__icon">📅</div>
+          </div>
+          <h3>Plazos flexibles</h3>
+          <p>Elige entre 7, 14 o 30 días. Extiende tu plazo cuando lo necesites, sin penalizaciones.</p>
+        </div>
+
+        <div class="feature-card feature-card--large feature-card--right" data-aos>
+          <div class="feature-card__icon-wrap">
+            <div class="feature-card__icon">🛡️</div>
+          </div>
+          <h3>Tu privacidad, nuestra prioridad</h3>
+          <p>Tus datos están protegidos con encriptación bancaria. Nunca compartimos tu información con terceros sin tu consentimiento.</p>
+          <div class="feature-card__tag">CONDUSEF verificado</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ HOW IT WORKS ═══════════════ -->
+  <section class="how-it-works" id="how">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">3 pasos al dinero</p>
+        <h2 class="section-title">De solicitud a<br /><span class="accent">depósito en minutos.</span></h2>
+      </div>
+
+      <div class="steps">
+        <div class="step" data-aos>
+          <div class="step__number">01</div>
+          <div class="step__content">
+            <div class="step__icon">📲</div>
+            <h3>Descarga e instala</h3>
+            <p>Descarga PesoRápido gratis desde Play Store. Solo 18 MB, compatible con Android 6.0 o superior.</p>
+          </div>
+          <div class="step__connector"></div>
+        </div>
+
+        <div class="step" data-aos>
+          <div class="step__number">02</div>
+          <div class="step__content">
+            <div class="step__icon">📋</div>
+            <h3>Llena tu solicitud</h3>
+            <p>Ingresa tus datos básicos y sube tu INE. Nuestro sistema verifica en segundos, sin buró de crédito.</p>
+          </div>
+          <div class="step__connector"></div>
+        </div>
+
+        <div class="step" data-aos>
+          <div class="step__number">03</div>
+          <div class="step__content">
+            <div class="step__icon">🏦</div>
+            <h3>Recibe tu dinero</h3>
+            <p>¡Listo! El préstamo llega directo a tu cuenta bancaria o CLABE interbancaria en minutos.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="how-cta">
+        <a href="#download" class="btn btn--primary btn--lg">Empezar ahora — es gratis</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ TESTIMONIALS ═══════════════ -->
+  <section class="testimonials" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Lo que dicen nuestros usuarios</p>
+        <h2 class="section-title">Historias reales de<br /><span class="accent">mexicanos reales.</span></h2>
+      </div>
+
+      <div class="testimonials__grid">
+        <div class="testi-card testi-card--featured" data-aos>
+          <div class="testi-card__stars">★★★★★</div>
+          <p class="testi-card__quote">"Pedí $8,000 para cubrir una emergencia médica de mi mamá. En 12 minutos el dinero ya estaba en mi cuenta. No puedo creer lo fácil que fue. Gracias PesoRápido, los recomiendo con toda mi familia."</p>
+          <div class="testi-card__author">
+            <div class="testi-card__avatar testi-card__avatar--1">MG</div>
+            <div>
+              <b>María González</b>
+              <small>CDMX · Cliente desde 2024</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card" data-aos>
+          <div class="testi-card__stars">★★★★★</div>
+          <p class="testi-card__quote">"Sin historial crediticio y me aprobaron sin problema. Me aumentaron el límite al tercer préstamo. Muy buena app, fácil de usar."</p>
+          <div class="testi-card__author">
+            <div class="testi-card__avatar testi-card__avatar--2">JR</div>
+            <div>
+              <b>Jorge Ramírez</b>
+              <small>Guadalajara · 5 préstamos</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card" data-aos>
+          <div class="testi-card__stars">★★★★★</div>
+          <p class="testi-card__quote">"Lo usé para surtir mi negocio de tamales antes de las posadas. La app es muy sencilla, hasta mi abuelita podría usarla. 100% recomendada."</p>
+          <div class="testi-card__author">
+            <div class="testi-card__avatar testi-card__avatar--3">LM</div>
+            <div>
+              <b>Lucía Martínez</b>
+              <small>Monterrey · Negocio propio</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card" data-aos>
+          <div class="testi-card__stars">★★★★★</div>
+          <p class="testi-card__quote">"Rápido, seguro y sin complicaciones. Ya llevo 4 préstamos y siempre cumplen con el depósito en menos de 15 minutos. Mi app financiera favorita."</p>
+          <div class="testi-card__author">
+            <div class="testi-card__avatar testi-card__avatar--4">AC</div>
+            <div>
+              <b>Andrés Cruz</b>
+              <small>Puebla · 4 préstamos</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rating-summary" data-aos>
+        <div class="rating-summary__score">4.8</div>
+        <div class="rating-summary__detail">
+          <div class="rating-stars">★★★★★</div>
+          <p>Basado en <strong>84,200+</strong> reseñas en Google Play</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SAFETY ═══════════════ -->
+  <section class="safety">
+    <div class="container">
+      <div class="safety__inner">
+        <div class="safety__text" data-aos>
+          <p class="section-eyebrow">Seguro, limpio, transparente</p>
+          <h2 class="section-title">Tu tranquilidad es<br /><span class="accent">lo primero.</span></h2>
+          <p class="safety__desc">Operamos bajo regulación mexicana y cumplimos con todas las normas de la CONDUSEF. Sin letras chicas, sin cobros sorpresa.</p>
+        </div>
+        <div class="safety__cards" data-aos>
+          <div class="safety-card">
+            <span class="safety-card__icon">🏛️</span>
+            <div>
+              <b>Regulado por CONDUSEF</b>
+              <small>Supervisado por la autoridad financiera de México</small>
+            </div>
+          </div>
+          <div class="safety-card">
+            <span class="safety-card__icon">🔐</span>
+            <div>
+              <b>Datos encriptados</b>
+              <small>Cifrado SSL 256-bit en todas tus operaciones</small>
+            </div>
+          </div>
+          <div class="safety-card">
+            <span class="safety-card__icon">🚫</span>
+            <div>
+              <b>Sin spam ni publicidad</b>
+              <small>Tu número nunca se vende a terceros</small>
+            </div>
+          </div>
+          <div class="safety-card">
+            <span class="safety-card__icon">💬</span>
+            <div>
+              <b>Soporte en tiempo real</b>
+              <small>Chat y WhatsApp disponibles las 24 horas</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FAQ ═══════════════ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">¿Tienes dudas?</p>
+        <h2 class="section-title">Respuestas <span class="accent">rápidas.</span></h2>
+      </div>
+
+      <div class="faq__list">
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            ¿PesoRápido es completamente gratis?
+            <span class="faq-item__arrow">▾</span>
+          </button>
+          <div class="faq-item__a">
+            <p>La descarga es 100% gratis. Los préstamos tienen una comisión transparente que se muestra antes de confirmar, sin sorpresas. Nunca cobraremos nada sin tu autorización previa.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            ¿Necesito historial crediticio o buró de crédito?
+            <span class="faq-item__arrow">▾</span>
+          </button>
+          <div class="faq-item__a">
+            <p>No consultamos buró de crédito tradicional. Evaluamos tu capacidad de pago con información básica. Esto significa que personas sin historial crediticio también pueden ser aprobadas.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            ¿Cuánto tiempo tarda en llegar el dinero?
+            <span class="faq-item__arrow">▾</span>
+          </button>
+          <div class="faq-item__a">
+            <p>Una vez aprobada tu solicitud, el depósito llega en 10 minutos promedio, disponible los 7 días de la semana, incluyendo fines de semana y días festivos.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            ¿Qué documentos necesito?
+            <span class="faq-item__arrow">▾</span>
+          </button>
+          <div class="faq-item__a">
+            <p>Solo necesitas tu INE vigente y CURP. Sin comprobantes de ingresos, sin estados de cuenta, sin aval ni fiador. Todo se valida desde la app en menos de 2 minutos.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            ¿Es seguro dar mis datos personales?
+            <span class="faq-item__arrow">▾</span>
+          </button>
+          <div class="faq-item__a">
+            <p>Totalmente. Usamos encriptación bancaria de 256 bits. Tus datos nunca se venden ni comparten con terceros. Operamos bajo la Ley Federal de Protección de Datos Personales de México.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            ¿Puedo renovar o aumentar mi préstamo?
+            <span class="faq-item__arrow">▾</span>
+          </button>
+          <div class="faq-item__a">
+            <p>Sí. Cada pago puntual aumenta automáticamente tu límite de crédito disponible. Con el tiempo puedes acceder a montos mayores y mejores tasas como usuario frecuente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ DOWNLOAD CTA ═══════════════ -->
+  <section class="download-cta" id="download">
+    <div class="download-cta__orb download-cta__orb--1"></div>
+    <div class="download-cta__orb download-cta__orb--2"></div>
+    <div class="container download-cta__inner">
+      <div class="download-cta__text" data-aos>
+        <h2>Tu dinero está<br /><span class="accent">esperándote.</span></h2>
+        <p>Más de 2.5 millones de mexicanos ya confían en PesoRápido. En 30 segundos puedes tener la app instalada.</p>
+        <a href="#" class="btn btn--primary btn--xl" id="mainDownloadBtn">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3.18 23.15c.3.17.64.17.94 0L19 13.85l-3.99-3.85-11.83 13.15zM.01 1.54C.01 1.95 0 2.38.01 2.84v18.32c0 .46 0 .88.01 1.28L13.07 12 .01 1.54zM23.17 10.24l-3.08-1.75L15.85 12l4.24 4.09 3.08-1.75c.88-.5.88-1.7 0-2.1zM4.12.85 15.85 10.11 19.83 6.3 4.12.85z" fill="currentColor"/></svg>
+          Descargar en Google Play
+        </a>
+        <p class="download-cta__legal">✓ 18 MB · Android 6.0+ · Gratis para siempre</p>
+      </div>
+
+      <div class="download-cta__badges" data-aos>
+        <div class="app-badge">
+          <span class="app-badge__icon">⭐</span>
+          <div>
+            <b>4.8 / 5.0</b>
+            <small>84,200 reseñas</small>
+          </div>
+        </div>
+        <div class="app-badge">
+          <span class="app-badge__icon">📥</span>
+          <div>
+            <b>2.5M+</b>
+            <small>Descargas verificadas</small>
+          </div>
+        </div>
+        <div class="app-badge">
+          <span class="app-badge__icon">🏅</span>
+          <div>
+            <b>App del año</b>
+            <small>Finanzas México 2024</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="nav__logo">
+          <span class="nav__logo-icon">₱</span>
+          <span>Peso<strong>Rápido</strong></span>
+        </a>
+        <p>La app de préstamos personales más confiable de México. Rápido, seguro, transparente.</p>
+      </div>
+      <div class="footer__links">
+        <a href="#">Privacidad</a>
+        <a href="#">Términos</a>
+        <a href="#">CONDUSEF</a>
+        <a href="#">Contacto</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© 2026 PesoRápido. Todos los derechos reservados. Solo para mayores de 18 años. Las fotos de perfil son representaciones ilustrativas, no usuarios reales.</p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════ STICKY BOTTOM BAR ═══════════════ -->
+  <div class="sticky-bar" id="stickyBar">
+    <div class="sticky-bar__inner">
+      <div class="sticky-bar__text">
+        <span class="sticky-bar__pulse"></span>
+        <strong>¡Obtén hasta $20,000 MXN hoy!</strong>
+        <span class="sticky-bar__sub">Aprobación en 60 segundos</span>
+      </div>
+      <a href="#download" class="btn btn--primary btn--sm" id="stickyDownloadBtn">Descargar gratis</a>
+    </div>
+  </div>
+
+  <!-- ═══════════════ FB/WEBVIEW MODAL ═══════════════ -->
+  <div class="modal-overlay" id="browserModal">
+    <div class="modal-box">
+      <div class="modal-box__icon">⚠️</div>
+      <h3>Abre en tu navegador</h3>
+      <p>Para descargar la app necesitas abrir esta página en Chrome o en tu navegador nativo.</p>
+      <button class="btn btn--primary btn--lg modal-btn" id="openChrome">
+        📱 Abrir en Chrome
+      </button>
+      <button class="btn btn--outline modal-btn" id="copyLink">
+        📋 Copiar enlace
+      </button>
+      <p class="modal-copied" id="copiedMsg">✅ ¡Enlace copiado!</p>
+      <button class="modal-close" id="closeModal">Cerrar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
